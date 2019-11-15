@@ -8,7 +8,6 @@ public class CosmeticTransformationsDefinedOnject : MonoBehaviour
     public Turn turn;
 
     private SpriteRenderer spriteRenderer;
-    private Transform transform;
 
     public enum Turn
     {
@@ -21,8 +20,6 @@ public class CosmeticTransformationsDefinedOnject : MonoBehaviour
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-
-        transform = GetComponent<Transform>();
     }
 
     public void ToDetermine()
