@@ -100,6 +100,7 @@ public class DragElement : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         {
             //Debug.Log("Объект найден");
             hit.collider.gameObject.GetComponent<SpriteRenderer>().sprite = mainSprite;
+            hit.collider.gameObject.GetComponent<CosmeticTransformationsDefinedOnject>().ToDetermine();
         }
     }
 
