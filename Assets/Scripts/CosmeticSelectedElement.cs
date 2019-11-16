@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CosmeticTransformationsDefinedOnject : MonoBehaviour
+public class CosmeticSelectedElement : MonoBehaviour
 {
     public Color selectionColor;
     public Turn turn;
 
     private SpriteRenderer spriteRenderer;
-    private Transform transform;
 
     public enum Turn
     {
@@ -21,8 +20,6 @@ public class CosmeticTransformationsDefinedOnject : MonoBehaviour
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-
-        transform = GetComponent<Transform>();
     }
 
     public void ToDetermine()
