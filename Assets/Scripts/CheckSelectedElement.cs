@@ -4,15 +4,40 @@ using UnityEngine;
 
 public class CheckSelectedElement : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Color rightChoiceColor;
+    public Color wrongChoiceColor;
+
+    public Sprite rightSprite;
+
+    private bool isRightChoice = false;
+    public bool IsRightChoice
     {
-        
+        get { return isRightChoice; }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void CheckCorrectness(Sprite sprite)
     {
-        
+        if(sprite == rightSprite)
+        {
+            isRightChoice = true;
+        }
+        else
+        {
+            isRightChoice = false;
+        }
+    }
+
+    public void CheckResult()
+    {
+        if (isRightChoice)
+        {
+            GetComponent<SpriteRenderer>().color = rightChoiceColor;
+
+            //эффекты и звуки с увеличение мчёта
+        }
+        else
+        {
+            GetComponent<SpriteRenderer>().color = wrongChoiceColor;
+        }
     }
 }

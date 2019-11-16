@@ -99,9 +99,13 @@ public class DragElement : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         if (Physics.Raycast(ray, out hit))
         {
             //Debug.Log("Объект найден");
-            hit.collider.gameObject.GetComponent<SpriteRenderer>().sprite = mainSprite;
+            GameObject hitGameObject = hit.collider.gameObject;
 
-            hit.collider.gameObject.GetComponent<CosmeticSelectedElement>().ToDetermine();//jgh
+            hitGameObject.GetComponent<SpriteRenderer>().sprite = mainSprite;
+
+            hitGameObject.GetComponent<CosmeticSelectedElement>().ToDetermine();
+
+            hitGameObject.GetComponent<CheckSelectedElement>().CheckCorrectness(mainSprite);
         }
     }
 

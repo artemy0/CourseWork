@@ -122,3 +122,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5e55f8f9e6dd7c459bd5a9c20eeaeab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rightChoiceColor: {r: 0.7422663, g: 0.9622642, b: 0.6944642, a: 1}
+  wrongChoiceColor: {r: 0.9811321, g: 0.69950455, b: 0.67105734, a: 1}
