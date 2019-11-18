@@ -9,6 +9,6 @@ public class GUIResultUpdate : MonoBehaviour
 
     private void Start()
     {
-        resultsText.text = "right answers: " + ResultsSave.RightAnswersNumber + "/" + ResultsSave.TotalQuestions;
+        resultsText.text = "правильные ответы: " + ResultsSave.RightAnswersNumber + "/" + ResultsSave.TotalQuestions;
     }
 }

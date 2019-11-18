@@ -26,6 +26,10 @@ public class SelectionResults : MonoBehaviour
                 allAnswersAreCorrect = false;
         }
 
-        sceneLoader.NextQuestion(allAnswersAreCorrect);
+        if (allAnswersAreCorrect)
+        {
+            ResultsSave.IncrementRightAnswersNumber();
+        }
+        ResultsSave.DecrementQuestionsNumber();
     }
 }

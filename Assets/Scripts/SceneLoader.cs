@@ -17,14 +17,8 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene("Level" + ResultsSave.RandomSceneIndex() + "Scene"); //в принципе можно убрать Level+... и оставить только SceneMixer.RandomSceneIndex() что бы сцены загружались по индексу.
     }
 
-    public void NextQuestion(bool isRightAnswer)
+    public void NextQuestion()
     {
-        if (isRightAnswer)
-        {
-            ResultsSave.IncrementRightAnswersNumber();
-        }
-        ResultsSave.DecrementQuestionsNumber();
-
         if (ResultsSave.QuestionsNumber > 0)
             SceneManager.LoadScene("Level" + ResultsSave.RandomSceneIndex() + "Scene");
         else
