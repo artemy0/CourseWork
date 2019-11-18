@@ -5,6 +5,7 @@ using UnityEngine;
 public class SelectionResults : MonoBehaviour
 {
     public GameObject parentOfIndefiniteElements;
+    public SceneLoader sceneLoader;
 
     private CheckSelectedElement[] indefiniteElements;
 
@@ -15,9 +16,16 @@ public class SelectionResults : MonoBehaviour
 
     public void CheckGameResult()
     {
+        bool allAnswersAreCorrect = true;
+
         foreach (CheckSelectedElement indefiniteElement in indefiniteElements)
         {
             indefiniteElement.CheckResult();
+
+            if (!indefiniteElement.IsRightChoice)
+                allAnswersAreCorrect = false;
         }
+
+        sceneLoader.NextQuestion(allAnswersAreCorrect);
     }
 }

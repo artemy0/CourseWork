@@ -5,9 +5,14 @@ using UnityEngine;
 
 public class SceneLoader : MonoBehaviour
 {
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene("MainMenuScene");
+    }
+
     public void StartTest()
     {
-        ResultsSave.UpdateParameters(10);
+        ResultsSave.UpdateParameters(1);
         
         SceneManager.LoadScene("Level" + ResultsSave.RandomSceneIndex() + "Scene"); //в принципе можно убрать Level+... и оставить только SceneMixer.RandomSceneIndex() что бы сцены загружались по индексу.
     }

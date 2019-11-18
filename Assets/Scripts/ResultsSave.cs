@@ -5,6 +5,12 @@ using UnityEngine;
 public static class ResultsSave
 {
     //questions
+    private static int totalQuestions;
+    public static int TotalQuestions
+    {
+        get { return totalQuestions; }
+    }
+
     private static int questionsNumber;
     public static int QuestionsNumber
     {
@@ -29,11 +35,12 @@ public static class ResultsSave
     //methods
     public static void UpdateParameters(int numberOfQuestions)
     {
+        totalQuestions = numberOfQuestions;
         questionsNumber = numberOfQuestions;
         rightAnswersNumber = 0;
 
         sceneIndexes.Clear();
-        for (int i = SCENE_START; i < SCENE_FINISH; i++)
+        for (int i = SCENE_START; i <= SCENE_FINISH; i++)
             sceneIndexes.Add(i);
     }
 
