@@ -238,5 +238,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   efxSource: {fileID: 4608664111040841301}
+  musicSource: {fileID: 4608664111040841300}
   lowPitchRange: 0.95
   highPitchRange: 1.05

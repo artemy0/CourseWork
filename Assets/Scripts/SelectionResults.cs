@@ -5,7 +5,6 @@ using UnityEngine;
 public class SelectionResults : MonoBehaviour
 {
     public GameObject parentOfIndefiniteElements;
-    public SceneLoader sceneLoader;
 
     public AudioClip rightAnswerClip;
     public AudioClip wrongAnswerClip;

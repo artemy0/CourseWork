@@ -7,7 +7,7 @@ public class SoundManager : MonoBehaviour
     public static SoundManager instance = null;
 
     public AudioSource efxSource;
-    public static AudioSource musicSource;
+    public AudioSource musicSource;
     public float lowPitchRange = .95f;
     public float highPitchRange = 1.05f;
 
@@ -30,6 +30,4 @@ public class SoundManager : MonoBehaviour
 
         instance.efxSource.Play();
     }
-
-
 }
