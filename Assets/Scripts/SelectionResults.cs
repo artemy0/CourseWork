@@ -7,6 +7,9 @@ public class SelectionResults : MonoBehaviour
     public GameObject parentOfIndefiniteElements;
     public SceneLoader sceneLoader;
 
+    public AudioClip rightAnswerClip;
+    public AudioClip wrongAnswerClip;
+
     private CheckSelectedElement[] indefiniteElements;
 
     private void Start()
@@ -29,6 +32,12 @@ public class SelectionResults : MonoBehaviour
         if (allAnswersAreCorrect)
         {
             ResultsSave.IncrementRightAnswersNumber();
+
+            SoundManager.instance.PlaySingle(rightAnswerClip);
+        }
+        else
+        {
+            SoundManager.instance.PlaySingle(wrongAnswerClip);
         }
         ResultsSave.DecrementQuestionsNumber();
     }

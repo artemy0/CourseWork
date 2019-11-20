@@ -4,15 +4,32 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static SoundManager instance = null;
+
+    public AudioSource efxSource;
+    public static AudioSource musicSource;
+    public float lowPitchRange = .95f;
+    public float highPitchRange = 1.05f;
+
+    private void Awake() //реализация паттерна Singleton
     {
-        
+        if (instance == null)
+            instance = this;
+        else
+            Destroy(gameObject);
+
+        DontDestroyOnLoad(gameObject);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PlaySingle(AudioClip clip)
     {
-        
+        instance.efxSource.clip = clip;
+
+        float randomPitch = Random.Range(lowPitchRange, highPitchRange);
+        instance.efxSource.pitch = randomPitch;
+
+        instance.efxSource.Play();
     }
+
+
 }
