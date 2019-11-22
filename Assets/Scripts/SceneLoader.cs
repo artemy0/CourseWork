@@ -5,6 +5,18 @@ using UnityEngine;
 
 public class SceneLoader : MonoBehaviour
 {
+    public static SceneLoader instance = null;
+
+    private void Awake() //реализация паттерна Singleton
+    {
+        if (instance == null)
+            instance = this;
+        else
+            Destroy(gameObject);
+
+        DontDestroyOnLoad(gameObject);
+    }
+
     public void LoadMainMenu()
     {
         SceneManager.LoadScene("MainMenuScene");
