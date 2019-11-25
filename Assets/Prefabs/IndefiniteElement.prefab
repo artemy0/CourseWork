@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 2390849032524022860}
   - component: {fileID: -6630676562650632092}
   - component: {fileID: 8229988837754165075}
+  - component: {fileID: -1274299232591663665}
   m_Layer: 0
-  m_Name: IndefiniteForDragElement
+  m_Name: IndefiniteElement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -124,3 +125,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rightChoiceColor: {r: 0.7422663, g: 0.9622642, b: 0.6944642, a: 1}
   wrongChoiceColor: {r: 0.9811321, g: 0.69950455, b: 0.67105734, a: 1}
+  rightSprite: {fileID: 0}
+--- !u!111 &-1274299232591663665
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2390849032524022865}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 39fa854b6a2cb39469c0e6b073b2e4f7, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 67b7dec2b4989134d87749bee67582e6, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
