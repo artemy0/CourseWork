@@ -22,9 +22,9 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene("MainMenuScene");
     }
 
-    public void StartTest()
+    public void StartTest(int questionsNumber)
     {
-        ResultsSave.UpdateParameters(1);
+        ResultsSave.UpdateParameters(questionsNumber);
         
         SceneManager.LoadScene("Level" + ResultsSave.RandomSceneIndex() + "Scene"); //в принципе можно убрать Level+... и оставить только SceneMixer.RandomSceneIndex() что бы сцены загружались по индексу.
     }

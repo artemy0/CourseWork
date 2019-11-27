@@ -26,7 +26,7 @@ public static class ResultsSave
 
     //other
     public const int SCENE_START = 1; // минимальный индекс сцены
-    public const int SCENE_FINISH = 1; // финальная сцена, где пишется, что игра окончена
+    public const int SCENE_FINISH = 20; // финальная сцена, где пишется, что игра окончена
     public static bool isSoundOn = true;
 
     private static List<int> sceneIndexes = new List<int>(); // список сцен

@@ -7,7 +7,7 @@ public class CheckSelectedElement : MonoBehaviour
     public Color rightChoiceColor;
     public Color wrongChoiceColor;
 
-    public Sprite rightSprite;
+    public Sprite[] rightSprites;
 
     private bool isRightChoice = false;
     public bool IsRightChoice
@@ -17,14 +17,11 @@ public class CheckSelectedElement : MonoBehaviour
 
     public void CheckCorrectness(Sprite sprite)
     {
-        if(sprite == rightSprite)
-        {
-            isRightChoice = true;
-        }
-        else
-        {
-            isRightChoice = false;
-        }
+        isRightChoice = false;
+
+        for (int i = 0; i < rightSprites.Length; i++)
+            if (sprite == rightSprites[i])
+                isRightChoice = true;
     }
 
     public void CheckResult()

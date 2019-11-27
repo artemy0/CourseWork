@@ -1274,11 +1274,11 @@ MonoBehaviour:
       - m_Target: {fileID: 5115976592169506798, guid: cc27ce159b6245b4cb43f16f66838757,
           type: 3}
         m_MethodName: StartTest
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 10
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

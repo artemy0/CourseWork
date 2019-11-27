@@ -11,10 +11,8 @@ public class CosmeticSelectedElement : MonoBehaviour
 
     public enum Turn
     {
-        Left,
-        Bottom,
-        Right,
-        Top
+        Horizontal,
+        Vertical
     }
 
     private void Start()
@@ -38,16 +36,10 @@ public class CosmeticSelectedElement : MonoBehaviour
     {
         switch (turn)
         {
-            case Turn.Left:
+            case Turn.Horizontal:
                 break;
-            case Turn.Bottom:
+            case Turn.Vertical:
                 transform.rotation = new Quaternion(0, 0, 0.7f, 0.7f);
-                break;
-            case Turn.Right:
-                transform.rotation = new Quaternion(0, 0, 1.0f, 0.0f);
-                break;
-            case Turn.Top:
-                transform.rotation = new Quaternion(0, 0, 0.7f, -0.7f);
                 break;
         }
     }
