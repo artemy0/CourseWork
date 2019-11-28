@@ -284,16 +284,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: -1274299232591663665, guid: fa9c1c93b90b93e42b5bc63872bb356e,
-        type: 3}
-      propertyPath: m_Animations.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -1274299232591663665, guid: fa9c1c93b90b93e42b5bc63872bb356e,
-        type: 3}
-      propertyPath: m_Animations.Array.data[1]
-      value: 
-      objectReference: {fileID: 7400000, guid: 39fa854b6a2cb39469c0e6b073b2e4f7, type: 2}
     - target: {fileID: 2390849032524022867, guid: fa9c1c93b90b93e42b5bc63872bb356e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -365,6 +355,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: b358ed2555807f64e89b5d3c3ed37e92,
         type: 3}
+    - target: {fileID: -1274299232591663665, guid: fa9c1c93b90b93e42b5bc63872bb356e,
+        type: 3}
+      propertyPath: m_Animations.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -1274299232591663665, guid: fa9c1c93b90b93e42b5bc63872bb356e,
+        type: 3}
+      propertyPath: m_Animations.Array.data[1]
+      value: 
+      objectReference: {fileID: 7400000, guid: 39fa854b6a2cb39469c0e6b073b2e4f7, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa9c1c93b90b93e42b5bc63872bb356e, type: 3}
 --- !u!4 &167987280 stripped
@@ -1900,16 +1900,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: -1274299232591663665, guid: fa9c1c93b90b93e42b5bc63872bb356e,
-        type: 3}
-      propertyPath: m_Animations.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -1274299232591663665, guid: fa9c1c93b90b93e42b5bc63872bb356e,
-        type: 3}
-      propertyPath: m_Animations.Array.data[1]
-      value: 
-      objectReference: {fileID: 7400000, guid: 39fa854b6a2cb39469c0e6b073b2e4f7, type: 2}
     - target: {fileID: 2390849032524022867, guid: fa9c1c93b90b93e42b5bc63872bb356e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1986,6 +1976,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 334adf82eabfb89419a65cac002c9165,
         type: 3}
+    - target: {fileID: -1274299232591663665, guid: fa9c1c93b90b93e42b5bc63872bb356e,
+        type: 3}
+      propertyPath: m_Animations.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -1274299232591663665, guid: fa9c1c93b90b93e42b5bc63872bb356e,
+        type: 3}
+      propertyPath: m_Animations.Array.data[1]
+      value: 
+      objectReference: {fileID: 7400000, guid: 39fa854b6a2cb39469c0e6b073b2e4f7, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa9c1c93b90b93e42b5bc63872bb356e, type: 3}
 --- !u!4 &1201956096 stripped
