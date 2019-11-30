@@ -6,12 +6,12 @@ public class AnimationController : MonoBehaviour
 {
     public Animation anim;
 
-    public void PlayAnim()
+    public void PlayAnim() //проиграть анимацию объекта
     {
         anim.Play();
     }
 
-    public void PlayChildAnim()
+    public void PlayChildAnim() //проиграть анимацию дочерних объектов (необъодимо что бы проигрывать анимации неопределённых объектов у тайлмапа)
     {
         Animation[] childAnims = this.GetComponentsInChildren<Animation>();
 

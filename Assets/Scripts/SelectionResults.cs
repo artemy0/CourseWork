@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SelectionResults : MonoBehaviour
 {
-    public GameObject parentOfIndefiniteElements;
+    public GameObject parentOfIndefiniteElements; //ссылка на родитель, дочерние элементы которого неопределённые элементы которые нужно будет проверить
 
     public AudioClip rightAnswerClip;
     public AudioClip wrongAnswerClip;
@@ -13,7 +13,7 @@ public class SelectionResults : MonoBehaviour
 
     private void Start()
     {
-        indefiniteElements = parentOfIndefiniteElements.GetComponentsInChildren<CheckSelectedElement>();
+        indefiniteElements = parentOfIndefiniteElements.GetComponentsInChildren<CheckSelectedElement>(); //создаёт массив скриптов CheckSelectedElement каждого дочернего элемента parentOfIndefiniteElements
     }
 
     public void CheckGameResult()
@@ -22,15 +22,15 @@ public class SelectionResults : MonoBehaviour
 
         foreach (CheckSelectedElement indefiniteElement in indefiniteElements)
         {
-            indefiniteElement.CheckResult();
+            indefiniteElement.CheckResult(); //проверяет правильность присвоенного спрайта элементу
 
-            if (!indefiniteElement.IsRightChoice)
+            if (!indefiniteElement.IsRightChoice) //если хотя бы один спрайт элемента указан не верно, конечный результат то же является не верным
                 allAnswersAreCorrect = false;
         }
 
         if (allAnswersAreCorrect)
         {
-            ResultsSave.IncrementRightAnswersNumber();
+            ResultsSave.IncrementRightAnswersNumber(); //подсчёт правильных ответов
 
             SoundManager.instance.PlaySingle(rightAnswerClip);
         }
@@ -38,6 +38,7 @@ public class SelectionResults : MonoBehaviour
         {
             SoundManager.instance.PlaySingle(wrongAnswerClip);
         }
-        ResultsSave.DecrementQuestionsNumber();
+
+        ResultsSave.DecrementQuestionsNumber(); //подсчёт всего ответов
     }
 }

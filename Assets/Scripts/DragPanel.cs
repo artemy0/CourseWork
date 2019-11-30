@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using UnityEngine;
 
 
-public class DragPanel : MonoBehaviour
+public class DragPanel : MonoBehaviour //класс панели перетягиваемых элементов
 {
 
     [Tooltip("Ссылка на префаб драгуемого элемента")]
@@ -18,7 +18,7 @@ public class DragPanel : MonoBehaviour
 
     private void Start()
     {
-        for (int i = 0; i < sprites.Count; ++i)
+        for (int i = 0; i < sprites.Count; ++i) //заполнения панели перетягиваемыми элементами
         {
             var dragObject = Instantiate(dragColorPrefab, scrollViewContent);
             var script = dragObject.GetComponent<DragElement>();

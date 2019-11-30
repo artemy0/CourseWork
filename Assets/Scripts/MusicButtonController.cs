@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
-public class MusicButtonController : MonoBehaviour
+public class MusicButtonController : MonoBehaviour 
 {
     public Button musicOffButton;
     public Button musicOnButton;
 
-    void Start()
+    void Start() //метод который срабатывает когда загружается главное меню что бы определить включена ли музывка и следовательно предпринять необходимые меры
     {
         if (ResultsSave.isSoundOn)
         {

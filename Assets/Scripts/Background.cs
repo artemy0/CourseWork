@@ -9,7 +9,7 @@ public class Background : MonoBehaviour
 
     private SpriteRenderer backgroundSpriteRenderer;
 
-    private void Start()
+    private void Start() //случайное задание заднего фона
     {
         backgroundSpriteRenderer = background.GetComponent<SpriteRenderer>();
 

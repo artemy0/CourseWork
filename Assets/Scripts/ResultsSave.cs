@@ -2,39 +2,39 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class ResultsSave
+public static class ResultsSave //статический класс для хранения всей информации об игре и игровом процессе
 {
     //questions
-    private static int totalQuestions;
+    private static int totalQuestions; //всего вопросов в тесте
     public static int TotalQuestions
     {
         get { return totalQuestions; }
     }
 
-    private static int questionsNumber;
+    private static int questionsNumber; //осталось вопросов в тесте
     public static int QuestionsNumber
     {
         get { return questionsNumber; }
     }
 
     //answers
-    private static int rightAnswersNumber;
+    private static int rightAnswersNumber; //правильных ответов
     public static int RightAnswersNumber
     {
         get { return rightAnswersNumber; }
     }
 
     //other
-    public const int SCENE_START = 1; // минимальный индекс сцены
-    public const int SCENE_FINISH = 20; // финальная сцена, где пишется, что игра окончена
+    [SerializeField] public const int SCENE_START = 1; //минимальный индекс лвл сцены
+    [SerializeField] public const int SCENE_FINISH = 20; //максимальный индекс лвл сцены
     public static bool isSoundOn = true;
 
-    private static List<int> sceneIndexes = new List<int>(); // список сцен
-    private static System.Random random = new System.Random(); // генератор случайных чисел
-    private static int curSceneIndex = SCENE_START; // приватное поле с текущим количеством сцен
+    private static List<int> sceneIndexes = new List<int>(); //список индексов сцен
+    private static System.Random random = new System.Random(); //генератор случайных чисел
+    private static int curSceneIndex = SCENE_START; //приватное поле с текущим количеством сцен
 
     //methods
-    public static void UpdateParameters(int numberOfQuestions)
+    public static void UpdateParameters(int numberOfQuestions) //сбросить все параметры (чесло оставшихся вопросов, ответов, правильных ответов и допустимые вопросы)
     {
         totalQuestions = numberOfQuestions;
         questionsNumber = numberOfQuestions;
@@ -55,8 +55,7 @@ public static class ResultsSave
         rightAnswersNumber++;
     }
 
-    // выбираем рандомный индекс сцены которая не была разыграна
-    public static int RandomSceneIndex()
+    public static int RandomSceneIndex() // выбираем рандомный индекс уровня, которая не была разыграна
     {
         int tmp = -1;
 

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CosmeticSelectedElement : MonoBehaviour
+public class CosmeticSelectedElement : MonoBehaviour //класс отвечающий за организацию неопределённых элементов (их цвет, поворот и т.д.)
 {
     public Color selectionColor;
     public Turn turn;

@@ -7,12 +7,12 @@ public class SoundManager : MonoBehaviour
 {
     public static SoundManager instance = null;
 
-    public AudioSource efxSource;
-    public AudioSource musicSource;
-    public float lowPitchRange = .95f;
+    public AudioSource efxSource; //источник для efx звуков
+    public AudioSource musicSource; //источник для музыки
+    public float lowPitchRange = .95f; //задание тона аудио
     public float highPitchRange = 1.05f;
 
-    private float musicVolume;
+    private float musicVolume; //громкость музыки
 
     private void Awake() //реализация паттерна Singleton
     {
@@ -21,29 +21,15 @@ public class SoundManager : MonoBehaviour
         else
             Destroy(gameObject);
 
-        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject); //не удалять объект, что бы затем использовать его на других сценах (единый для всех сцен)
 
         //сохраняем громкость для последующих манипуляций с музыкой
         musicVolume = instance.musicSource.volume;
     }
 
-    //private void Start()
-    //{
-    //    if(instance.musicSource.volume == 0f)
-    //    {
-    //        musicOffButton.gameObject.SetActive(true);
-    //        musicOnButton.gameObject.SetActive(false);
-    //    }
-    //    else
-    //    {
-    //        musicOffButton.gameObject.SetActive(false);
-    //        musicOnButton.gameObject.SetActive(true);
-    //    }
-    //}  //надо сделать так что бы при переходе на сцену MainMenu вызывался данный скрипт
-
-    public void PlaySingle(AudioClip clip)
+    public void PlaySingle(AudioClip clip) //метод воспроизводящий клип единократно со случайным тоном
     {
-        instance.efxSource.clip = clip;
+        instance.efxSource.clip = clip; //instance используется так как SoundManager один для всех сцен
 
         float randomPitch = Random.Range(lowPitchRange, highPitchRange);
         instance.efxSource.pitch = randomPitch;
@@ -51,13 +37,13 @@ public class SoundManager : MonoBehaviour
         instance.efxSource.Play();
     }
 
-    public void TurnOnMusic()
+    public void TurnOnMusic() //возврощает громкость музыки и сохраняет данные о том что музыка включена в ResultsSave
     {
         instance.musicSource.volume = instance.musicVolume;
         ResultsSave.isSoundOn = true;
     }
 
-    public void TurnOffMusic()
+    public void TurnOffMusic() //присваивает громкосте музыки 0 и сохраняет данные о том что музыка выключена в ResultsSave
     {
         instance.musicSource.volume = 0f;
         ResultsSave.isSoundOn = false;

@@ -15,7 +15,7 @@ public class CheckSelectedElement : MonoBehaviour
         get { return isRightChoice; }
     }
 
-    public void CheckCorrectness(Sprite sprite)
+    public void CheckCorrectness(Sprite sprite) //проверка на соответствие правильнЫХ спрайта передаваемому спрайту
     {
         isRightChoice = false;
 
@@ -24,13 +24,11 @@ public class CheckSelectedElement : MonoBehaviour
                 isRightChoice = true;
     }
 
-    public void CheckResult()
+    public void CheckResult() //изменение цвета в зависимости результата проверки на правильность
     {
         if (isRightChoice)
         {
             GetComponent<SpriteRenderer>().color = rightChoiceColor;
-
-            //эффекты и звуки с увеличение мчёта
         }
         else
         {
